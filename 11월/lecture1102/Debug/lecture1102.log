@@ -1,0 +1,12 @@
+﻿  Dragon.cpp
+  Monster.cpp
+  Ogre.cpp
+  Slaim.cpp
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Slaim.cpp(9,30): error C2248: 'Monster::_defense': private 멤버('Monster' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Monster.h(11): message : 'Monster::_defense' 선언을 참조하십시오.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Monster.h(6): message : 'Monster' 선언을 참조하십시오.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Slaim.cpp(15,2): error C2248: 'Monster::_health': private 멤버('Monster' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Monster.h(10): message : 'Monster::_health' 선언을 참조하십시오.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1102\Monster.h(6): message : 'Monster' 선언을 참조하십시오.
+  main.cpp
+  코드를 생성하고 있습니다...
