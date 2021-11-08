@@ -1,0 +1,7 @@
+﻿  thispointer.cpp
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\thispointer\thispointer.cpp(15,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\thispointer\thispointer.cpp(16,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int **'입니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\thispointer\thispointer.cpp(17,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\thispointer\thispointer.cpp(18,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int *'입니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\thispointer\thispointer.cpp(19,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'int **'입니다.
+  thispointer.vcxproj -> C:\Users\Yeonjun Jung\Desktop\web\cppprimer\Project35\Debug\thispointer.exe
