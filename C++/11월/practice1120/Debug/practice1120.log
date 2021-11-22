@@ -1,0 +1,12 @@
+﻿  practice.cpp
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(57,14): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(58,16): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(60,16): warning C4244: '초기화 중': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(109,15): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(110,16): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(156,15): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(157,16): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(185,17): warning C4244: '=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(190,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\cppprimer\practice1120\practice.cpp(191,18): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  practice1120.vcxproj -> C:\Users\Yeonjun Jung\Desktop\web\cppprimer\lecture1122\Debug\practice1120.exe
