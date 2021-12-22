@@ -1,0 +1,4 @@
+﻿  main4.c
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1208-4\main4.c(7,7): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1208-4\main4.c(23,7): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  lecture1208-4.vcxproj -> C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1208\Debug\lecture1208-4.exe
