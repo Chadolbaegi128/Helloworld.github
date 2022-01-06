@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1224\lecture1224-1\main.c(32,20): warning C4047: '!=': 'int'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1224\lecture1224-1\main.c(77,37): warning C4047: '=': 'int'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+  lecture1224-1.vcxproj -> C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1224\Debug\lecture1224-1.exe

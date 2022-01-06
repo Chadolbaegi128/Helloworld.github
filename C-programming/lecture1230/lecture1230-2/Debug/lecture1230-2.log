@@ -1,0 +1,5 @@
+﻿  main3.c
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1230\lecture1230-2\main3.c(25,9): warning C4013: 'fcloase'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+main3.obj : error LNK2005: _main이(가) main2.obj에 이미 정의되어 있습니다.
+main3.obj : error LNK2019: _fcloase_main 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1230\Debug\lecture1230-2.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

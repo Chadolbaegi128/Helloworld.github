@@ -1,0 +1,5 @@
+﻿  main3.c
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1231\lecture1231-3\main3.c(23,7): warning C4013: 'srand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1231\lecture1231-3\main3.c(32,22): warning C4013: 'rand'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1231\lecture1231-3\main3.c(25,1): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+  lecture1231-3.vcxproj -> C:\Users\Yeonjun Jung\Desktop\web\C-programming\lecture1231\Debug\lecture1231-3.exe
