@@ -1,0 +1,14 @@
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.exe
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.deps.json
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.runtimeconfig.json
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.runtimeconfig.dev.json
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.dll
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\bin\Debug\netcoreapp3.1\Practice_02_05.pdb
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.csproj.AssemblyReference.cache
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.AssemblyInfoInputs.cache
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.AssemblyInfo.cs
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.csproj.CoreCompileInputs.cache
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.dll
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.pdb
+C:\Users\Yeonjun Jung\Desktop\web\Unity\Practice_02_05\obj\Debug\netcoreapp3.1\Practice_02_05.genruntimeconfig.cache
