@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BaseRotator : MonoBehaviour
+{
+    public Transform target;
+    public float speed = 60f;
+
+    void Update()
+    {
+        //transform.forward=Vector3 (0,0,1);
+        Vector3 targetObject = target.position;
+        float step = speed*Time.deltaTime;
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetObject, step, 0.0f);
+
+        transform.rotation = Quaternion.LookRotation(newDir);
+    }
+   
+}

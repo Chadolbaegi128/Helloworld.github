@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TargetRotator : MonoBehaviour
+{
+    public Transform baseRotator;
+
+    void Update()
+    {
+        transform.LookAt(baseRotator.transform.forward);
+    }
+
+
+}

@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Cat 클래스의 인스턴스 생성
+        Cat nate = new Cat ();
+        nate.name = "Nate";
+        nate.weight = 1.5f;
+        nate.year = 3;
+
+        //Dog 클래스의 인스턴스 생성
+        Dog jack = new Dog();
+        jack.name = "Jack";
+        jack.weight = 10f;
+        jack.year = 2;
+
+        nate.Stealth ();
+        nate.Print ();
+
+        jack.Hunt ();
+        jack.Print ();
+
+        Animal someAnimal = jack;
+
+        someAnimal.Print();
+
+        Dog myDog = (Dog)someAnimal;
+
+        myDog.Hunt();
+        
+    }
+       
+}

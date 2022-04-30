@@ -1,0 +1,86 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RayInteraction : MonoBehaviour
+{
+    public LayerMask WhatIsLayer;
+
+    // 모니터 화면에서 날아오는 광선(Ray)의 거리
+    public float distance = 100f;
+
+    Camera PlayerCam;
+
+    //충돌한 게임오브젝트 정보를 담은 후
+    //시선이 움직일 때 같이 움직이게 만든다.
+    Transform MoveTarget;
+
+    //충돌하는 게임오브젝트와
+    //시선을 움직이는 게임오브젝트 사이의 거리
+    float targetDistance;
+
+    void Start ()
+    {
+        // MainCamera 불러오기
+        PlayerCam = Camera.main;    
+    }
+
+    void Update ()
+    {
+        // 실제 Ray가 출발하는 좌표 생성->X좌표: 가로 지점/Y좌표: 세로 지점/Z좌표: 카메라와 게임 세상 사이의 거리차
+        Vector3 rayOrigin = PlayerCam.ViewportToWorldPoint (new Vector3 (0.5f,0.5f,0f));
+
+        //Ray의 방향 설정->메인카메라의 전방
+        Vector3 rayDir = PlayerCam.transform.forward;
+
+        //Ray 정보를 나타내는 구조체
+        Ray ray = new Ray(rayOrigin, rayDir);
+
+        //화면 상에 직선이 나아가는걸 표시해주는 메서드(개발자 확인용)
+        Debug.DrawRay(ray.origin, ray.direction *100f, Color.green);
+
+        if (Input.GetMouseButtonDown (0))
+        {
+            //Raycast의 정보가 담긴 구조체
+            RaycastHit hit;
+
+            //out 키워드를 이용해 RaycastHit 구조체의 정보를 매개변수로 넣을 수 있다.
+            if (Physics.Raycast(ray,out hit, distance, WhatIsLayer))
+            {
+                //충돌한 게임오브젝트 불러오기
+                GameObject hitTarget = hit.collider.gameObject;
+
+                //충돌한 게임오브젝트의 Renderer컴포넌트를 불러오고
+                //Ray가 충돌하면 게임오브젝트의 색깔을 빨강색으로 변화시키기
+                hitTarget.GetComponent<Renderer> ().material.color = Color.red;
+
+                //Ray에 부딪힌 게임오브젝트의 이름을 출력해준다.
+                //Debug.Log(hit.collider.gameObject.name);
+
+                //Debug.Log("뭔가 광선에 걸렸다.");
+
+                MoveTarget = hitTarget.transform;
+                targetDistance = hit.distance;
+            }
+        }
+
+        //마우스 왼쪽버튼을 떼면 바라보고 있는 게임오브젝트가 해제됨
+        if (Input.GetMouseButtonUp(0))
+        {
+            //마우스 왼쪽버튼을 해제하면 게임오브젝트의 색깔을
+            //원래 하얀색으로 변경함
+            if(MoveTarget != null)
+            {
+                MoveTarget.GetComponent<Renderer> ().material.color = Color.white;
+            }
+            MoveTarget = null;
+        }
+
+        //쳐다보고 있는 게임오브젝트와 나와의 거리를
+        //유지하며 게임오브젝트가 이동함
+        if(MoveTarget != null)
+        {
+            MoveTarget.position = ray.origin + ray.direction*targetDistance;
+        }
+    }
+}

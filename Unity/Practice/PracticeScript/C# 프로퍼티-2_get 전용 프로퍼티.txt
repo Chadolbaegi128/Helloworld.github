@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MonsterManager : MonoBehaviour
+{
+    //외부에서 요청이 들어오면 몬스터 갯수를 알려주는 클래스
+
+    //get 전용 프로퍼티
+    //set 전용 프로퍼티를 만들 수 있지만 이때는 구현 스크립트에
+    //입력값을 넣어야 한다.
+    public int Count
+    {
+        get
+        {
+            //Monster 클래스를 갖는 모든 게임오브젝트를 찾고
+            //이를 배열로 만듦
+           Monster[] monsters =  FindObjectsOfType<Monster>();
+
+            //monsters배열의 길이 반환
+            return monsters.Length;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PointManager : MonoBehaviour
+{
+
+    //0보다 작으면 0점, 10,000점보다 크면 10,000점
+    //둘 다 아니면 현재 입력한 점수로 설정
+    //입력된 점수를 반환하는 메서드
+
+
+    //int a = point; GET => point 변수를 사용하면
+    //point 프로퍼티에 설정된 get 메서드가 발동되어
+    //값을 반환한다.
+    //point = 100; SET => point 변수에 100을 입력하면
+    //point 프로퍼티에 설정된 set 메서드가 발동되어
+    //set메서드에 입력된 명령이 수행된다.
+    public int Point
+    {
+        get
+        {
+            Debug.Log(point);
+            return point;
+        }
+        set
+        {
+            if (value < 0)
+            {
+                point = 0;
+            }
+            else
+            {
+                point = value;
+            }
+        }
+    }
+
+    int point = 0;
+}

@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PointManagerTest : MonoBehaviour
+{
+    public PointManager PointManager;
+
+    public MonsterManager MonsterManager;
+
+    //설정한 점수 출력
+    void Start()
+    {
+        //PointManager.Point = 100;
+        //Debug.Log("현재 점수: " + PointManager.Point);
+
+        //PointManager.Point = -1000;
+        //Debug.Log("현재 점수: " + PointManager.Point);
+
+        Debug.Log(MonsterManager.Count);
+    }
+}
