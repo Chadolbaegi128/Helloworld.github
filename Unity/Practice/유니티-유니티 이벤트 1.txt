@@ -1,0 +1,91 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerHealth : MonoBehaviour
+{
+    //플레이어가 죽을 때 발동되는 명령들을
+    //PlayerHealth에 연결함
+    public UIManager _uIManagement;
+    public AchievementsSystem _achivement;
+    public GameManager _gameManagement;
+
+    //플레이어가 죽었을 때 실행할 명령들(로직)
+    void Dead ()
+    {
+        //죽으면 화면 정중앙에 문구를 띄움
+        _uIManagement.OnPlayerDead ();
+
+        //화면 우측 상단에 도전과제 업적 표시
+        _achivement.UnlockAchivement ("뉴턴의 법칙");
+
+        //캐릭터가 죽고 나서 5초 뒤에 게임 재시작
+        _gameManagement.OnPlayerDead ();
+
+        Debug.Log("죽었다!");
+        Destroy (gameObject);
+    }
+
+    void OnTriggerEnter (Collider other)
+    {
+        Dead();
+    }
+}
+
+--------------------------------------------------
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AchievementsSystem : MonoBehaviour
+{
+    public Text _achivementText;
+
+    public void UnlockAchivement(string title)
+    {
+        Debug.Log("도전과제 해제! - " + title);
+        _achivementText.text = "도전과제 해제: " + title;
+    }
+}
+
+-------------------------------------------------------
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class GameManager : MonoBehaviour
+{
+
+    public void OnPlayerDead()
+    {
+        Invoke("Restart", 5f);
+    }
+
+   void Restart()
+    {
+        SceneManager.LoadScene(0);
+    }
+}
+
+---------------------------------------------------------
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UIManager : MonoBehaviour
+{
+    //3D캐릭터가 죽으면 화면에 문구를 띄우게 만드는 스크립트
+
+    public Text _playerStateText;
+
+    public void OnPlayerDead()
+    {
+        _playerStateText.text = "You Die!";
+    }
+   
+}

@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Messenger : MonoBehaviour
+{
+    public delegate void Send(string reciever);
+
+    Send _onSend;
+
+    void Start()
+    {
+        _onSend += SendMail;
+        _onSend += SendMoney;
+
+        // 람다 함수(Lambda Expression)
+        // 무명 메서드(Anonymous Method)의 일종이며
+        // 람다 함수를 이용한 무명 메서드를
+        // "무명 함수(Anonymous Fuction)"이라고 부른다.
+        // 함수를 변수값처럼 저장할 수 있다.
+        // 오브젝트처럼 변수에 저장이 가능한 함수다
+        _onSend += (man) => Debug.Log("Assasinate " + man);
+
+        //함수가 2개 이상 나온다면
+        //중괄호를 입력해야 한다.
+        _onSend += (string man) =>
+        {
+            Debug.Log("Assasinate " + man);
+            Debug.Log("Hide Body!");
+        };
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _onSend("Yeonjun");
+        }    
+    }
+
+    void SendMail(string reciever)
+    {
+        Debug.Log("Mail sent to: " + reciever);
+    }
+
+    void SendMoney(string reciever)
+    {
+        Debug.Log("Money sent to: " + reciever);
+    }
+}

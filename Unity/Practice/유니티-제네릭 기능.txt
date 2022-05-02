@@ -1,0 +1,83 @@
+(제네릭 메서드)
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Util : MonoBehaviour
+{
+    //제네릭(Generic)
+    //클래스나 인스턴스(객체)가 선언될 때가 아닌
+    //사용될 때 데이터 타입을 정해주는 기능
+    public void Print<T>(T inputMessage)
+    {
+        Debug.Log(inputMessage);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        Print<int>(30);
+        Print<string>("Hello World!");
+    }
+
+}
+
+--------------------------------------------------
+(제네릭 클래스)
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Util : MonoBehaviour
+{
+    //제네릭(Generic)
+    //클래스나 인스턴스(객체)가 선언될 때가 아닌
+    //사용될 때 데이터 타입을 정해주는 기능  
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //Container 클래스 인스턴스 생성
+        //유니티 List 클래스가 이런식으로 작동함
+        Container<string> container = new Container<string>();
+
+        //messages 배열 생성
+        container.messages = new string[3];
+
+        //배열값 입력
+        container.messages[0] = "Hello,";
+        container.messages[1] = "World";
+        container.messages[2] = "Generic!";
+
+        //배열에 입력된 메세지 출력
+        for(int i = 0; i < container.messages.Length; i++)
+        {
+            Debug.Log(container.messages[i]);
+        }
+
+        //Container 클래스의 다른 인스턴스 생성
+        Container<int> container2 = new Container<int>();
+
+        //messages 배열 생성
+        container2.messages = new int[3];
+
+        //배열값 입력
+        container2.messages[0] = 30;
+        container2.messages[1] = 31;
+        container2.messages[2] = 32;
+
+        //배열에 입력된 메세지 출력
+        for (int i = 0; i < container2.messages.Length; i++)
+        {
+            Debug.Log(container2.messages[i]);
+        }
+    }
+
+}
+
+//Container 클래스 선언
+public class Container<T>
+{
+    //string 타입 messages 배열 선언
+    public T[] messages;
+}

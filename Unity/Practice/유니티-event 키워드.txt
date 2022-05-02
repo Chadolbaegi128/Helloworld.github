@@ -1,0 +1,82 @@
+(event 키워드를 델리게이트명 앞에 수식)
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Character : MonoBehaviour
+{
+    //델리게이트 선언
+    public delegate void Boost(Character target);
+
+    //event키워드는 델리게이트에 등록된 명령들이
+    //덮어씌워지거나 오류가 발생하는 것을 방지해준다.
+    public event Boost playerBoost;
+
+    //C# 이벤트 기능 활용
+    //캐릭터에 중첩되는 부스터 효과 발동
+    public string playerName = "Yeonjun";
+
+    public float hp = 100;
+    public float defense = 50;
+    public float damage = 30;
+
+  //이벤트 핸들러 호출
+    void Start()
+    {
+        playerBoost(this);    
+    }
+
+  //실행 메서드
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerBoost(this);
+        }    
+    }
+
+}
+
+------------------------------------------
+(event키워드로 한정된 델리게이트에 실행할 명령 입력,
+event키워드가 델리게이트 인스턴스 앞에 수식되는 순간
+델리게이트에 등록된 명령들은 "+=,-=" 연산자외에는 사용할 수 없다.
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Booster : MonoBehaviour
+{
+   //캐릭터에 적용되는 부스터 명령
+
+  //이벤트 핸들러 메서드 1
+   public void HealthBoost(Character target)
+    {
+        Debug.Log(target.playerName + "의 체력을 강화했다!");
+        target.hp += 10;
+    }
+
+  //이벤트 핸들러 메서드 2
+    public void ShieldBoost(Character target)
+    {
+        Debug.Log(target.playerName + "의 방어력을 강화했다!");
+        target.defense += 10;
+    }
+
+  //이벤트 핸들러 메서드 3
+    public void DamageBoost(Character target)
+    {
+        Debug.Log(target.playerName + "의 공격력을 강화했다!");
+        target.damage += 10;
+    }
+
+  //이벤트 핸들러 연결
+    void Awake()
+    {
+        Character player = FindObjectOfType<Character>();
+        player.playerBoost += HealthBoost;
+        player.playerBoost += ShieldBoost;
+        player.playerBoost += DamageBoost;        
+    }
+}
+

@@ -1,0 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System;
+
+public class Worker : MonoBehaviour
+{
+    // 리턴 타입이 없고 매개변수가 없는 델리게이트 타입
+    // delegate void Action()
+    Action _work;
+
+    void MoveBricks()
+    {
+        Debug.Log("벽돌을 옮겼다!");
+    }
+
+    void DigIn()
+    {
+        Debug.Log("땅을 팠다!");
+    }
+
+    void Start()
+    {
+        _work += MoveBricks;
+        _work += DigIn;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _work();
+        }    
+    }
+}
